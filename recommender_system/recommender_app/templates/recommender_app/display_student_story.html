@@ -1,0 +1,10 @@
+{%  extends 'recommender_app/template.html' %}
+{% block content %}
+  {% for storys in story %}
+      <p>
+        Title - {{storys.title}}<br>
+        Date Created - {{storys.date_created}}<br>
+        Description - {{storys.description}}<br>
+      </p>
+  {% endfor %}
+{% endblock %}
