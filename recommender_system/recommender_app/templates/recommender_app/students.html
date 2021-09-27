@@ -1,6 +1,6 @@
 {%  extends 'recommender_app/template.html' %}
 {% block content %}
-  {% for students in student %}
+  {% for student in students %}
     <div class="row">
       <div class="col">
         <img class="img-profile rounded-circle profile-pic"
@@ -9,12 +9,12 @@
       <div class="col">
         <p>
           <a target="_blank" href="{% url 'display_student_story' students.id %}">Full Name - {{students.name}}</a><br>
-          Phone Number - {{students.phone}}<br>
-          Email Address - {{students.email}}<br>
-          Status - {{students.status}}<br>
-          Job Description - {{students.job_description}}<br>
-          Skills - {{students.skills}}<br>
-          Date Graduated - {{students.date_graduated}}<br>
+          Phone Number - {{student.phone}}<br>
+          Email Address - {{student.email}}<br>
+          Status - {{student.status}}<br>
+          Job Description - {{student.job_description}}<br>
+          Skills - {{student.skills}}<br>
+          Date Graduated - {{student.date_graduated}}<br>
         </p>
       </div>
     </div>
